@@ -1,0 +1,23 @@
+ body {
+     min-height: 100vh;
+ }
+
+ .footer {
+     position: absolute;
+     bottom: 0;
+     width: 100%;
+     border-top: 1px solid rgb(196, 196, 196);
+     /* background-color: #f8f9fa; */
+     background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+     padding: 10px 0;
+     text-align: center;
+     color: #ffffff;
+     font-size: 12px;
+ }
+
+ .navbar{
+     background: linear-gradient(90deg, rgba(0, 212, 255, 1), rgba(9, 9, 121, 1), rgba(0, 212, 255, 1));
+ }
+ .navbar-brand {
+     color: #ffffff;
+ }
