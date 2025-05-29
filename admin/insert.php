@@ -17,17 +17,15 @@ $check_row = mysqli_fetch_assoc($check_result);
 if (isset($check_row)) {
     echo "<script>alert('This email is alredy exsist.')</script>";
     echo "<script>window.location='add.php'</script>";
-}else{
-    
-$query = "INSERT INTO `admin` (name, email, mobile,password,image) VALUES ('$name', '$email', '$mobile','$password','$image_name')";
-
-if (mysqli_query($con, $query)) {
-    echo "<script>alert('Registred')</script>";
-    echo "<script>window.location='index.php'</script>";
 } else {
-    echo "<script>alert('Not Registred')</script>";
-    echo "<script>window.location='index.php'</script>";
-}
 
+    $query = "INSERT INTO `admin` (name, email, mobile,password,image) VALUES ('$name', '$email', '$mobile','$password','$image_name')";
+
+    if (mysqli_query($con, $query)) {
+        echo "<script>alert('Registred')</script>";
+        echo "<script>window.location='index.php'</script>";
+    } else {
+        echo "<script>alert('Not Registred')</script>";
+        echo "<script>window.location='index.php'</script>";
+    }
 }
-?>

@@ -20,11 +20,11 @@
                     <form action="login_back.php" method="post">
                         <div class="form-group">
                             <label>Email :</label>
-                            <input type="email" class="form-control" name="login_email" id="login_email" value="<?php echo isset($_COOKIE['email']) ? $_COOKIE['email'] : '' ?>">
+                            <input type="email" class="form-control" name="login_email" id="login_email" required value="<?php echo isset($_COOKIE['email']) ? $_COOKIE['email'] : '' ?>">
                         </div>
                         <div class="form-group">
                             <label>Password :</label>
-                            <input type="password" class="form-control" name="login_password" id="login_password" value="<?php echo isset($_COOKIE['password']) ? $_COOKIE['password'] : '' ?>">
+                            <input type="password" class="form-control" name="login_password" required id="login_password" value="<?php echo isset($_COOKIE['password']) ? $_COOKIE['password'] : '' ?>">
                         </div>
                         <div class="form-group">
                             <input type="checkbox" class="" name="remeber_me" id="remeber_me" <?php if(isset($_COOKIE['password']) && isset($_COOKIE['email'])){ ?> checked <?php } ?>>

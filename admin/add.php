@@ -8,19 +8,19 @@ require "navbar.php";
         <form class="mt-4" action="insert.php" id="add_form" name="add_form" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label>Name :</label>
-                <input type="text" class="form-control" name="name" id="name">
+                <input type="text" class="form-control" name="name" id="name" required>
             </div>
             <div class="form-group">
                 <label>Email :</label>
-                <input type="email" class="form-control" name="email" id="email">
+                <input type="email" class="form-control" name="email" id="email" required>
             </div>
             <div class="form-group">
                 <label>Mobile :</label>
-                <input type="number" class="form-control" name="mobile" id="mobile">
+                <input type="text" class="form-control" name="mobile" id="mobile" maxlength="10" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
             </div>
             <div class="form-group">
                 <label>Password :</label>
-                <input type="password" class="form-control" name="password" id="password">
+                <input type="password" class="form-control" name="password" id="password" required>
             </div>
             <div class="form-group">
                 <label>Image :</label>

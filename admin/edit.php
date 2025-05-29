@@ -13,15 +13,15 @@ $row = mysqli_fetch_assoc($result);
             <input type="hidden" name="id" id="id" value="<?= $row['id'] ?>">
             <div class="form-group">
                 <label>Name :</label>
-                <input type="text" class="form-control" name="name" id="name" value="<?= $row['name'] ?>">
+                <input type="text" class="form-control" name="name" id="name" value="<?= $row['name'] ?>" required>
             </div>
             <div class="form-group">
                 <label>Email :</label>
-                <input type="email" class="form-control" name="email" id="email" value="<?= $row['email'] ?>">
+                <input type="email" class="form-control" name="email" id="email" value="<?= $row['email'] ?>" required>
             </div>
             <div class="form-group">
                 <label>Mobile :</label>
-                <input type="number" class="form-control" name="mobile" id="mobile" value="<?= $row['mobile'] ?>">
+                <input type="text" class="form-control" name="mobile" id="mobile" maxlength="10" onkeypress="return event.charCode >= 48 && event.charCode <= 57" value="<?= $row['mobile'] ?>" required>
             </div>
             <div class="form-group">
                 <label>Image :</label>
