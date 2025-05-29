@@ -6,8 +6,7 @@ $name = $_POST['name'];
 $email = $_POST['email'];
 $mobile = $_POST['mobile'];
 
-    $query = "UPDATE `add_admin` SET `name`='$name',`email`='$email',`mobile`='$mobile' WHERE id='$id'";
-// $query = "INSERT INTO `add_admin` (name, email, mobile) VALUES ('$name', '$email', '$mobile')";
+$query = "UPDATE `add_admin` SET `name`='$name',`email`='$email',`mobile`='$mobile' WHERE id='$id'";
 
 if (mysqli_query($con, $query)) {
     echo "<script>alert('Updated')</script>";
