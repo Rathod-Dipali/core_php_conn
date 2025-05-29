@@ -20,10 +20,22 @@ require "navbar.php";
             </div>
             <div class="form-group">
                 <label>Password :</label>
-                <input type="text" class="form-control" name="password" id="password">
+                <input type="password" class="form-control" name="password" id="password">
+            </div>
+            <div class="form-group">
+                <label>Image :</label>
+                <input type="file" class="form-control mb-1" name="image" id="image">
+                <img src="" alt="Image not choosen" width="100" id="img">
             </div>
             <button type="submit" class="btn btn-outline-primary mt-5" name="add_btn" id="add_btn">Add Data</button>
         </form>
     </div>
 </section>
 <?php require "footer.php"; ?>
+<script>
+    var file = document.getElementById("image");
+    var img = document.getElementById("img");
+    file.addEventListener("change", (e) => {
+        img.src = URL.createObjectURL(e.target.files[0])
+    })
+</script>

@@ -2,7 +2,7 @@
 $info_array = ['title' => 'Edit Admin'];
 require "navbar.php";
 $id = $_GET['id'];
-$query = "select * from `add_admin` where id='$id'";
+$query = "select * from `admin` where id='$id'";
 $result = mysqli_query($con, $query);
 $row = mysqli_fetch_assoc($result);
 ?>
@@ -23,8 +23,20 @@ $row = mysqli_fetch_assoc($result);
                 <label>Mobile :</label>
                 <input type="number" class="form-control" name="mobile" id="mobile" value="<?= $row['mobile'] ?>">
             </div>
+            <div class="form-group">
+                <label>Image :</label>
+                <input type="file" class="form-control mb-1" name="image" id="image">
+                <img src="<?= $base_url ?>assets/upload/<?= $row['image'] ?>" id="img" alt="Image not choosen" width="100">
+            </div>
             <button type="submit" class="btn btn-outline-primary mt-5" name="update_btn" id="update_btn">Update Data</button>
         </form>
     </div>
 </section>
 <?php require "footer.php"; ?>
+<script>
+    var file = document.getElementById("image");
+    var img = document.getElementById("img");
+    file.addEventListener("change", (e) => {
+        img.src = URL.createObjectURL(e.target.files[0])
+    })
+</script>

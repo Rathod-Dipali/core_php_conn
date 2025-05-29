@@ -1,11 +1,17 @@
 <?php
 require "config.php";
-
 if ($_POST['login_email'] && $_POST['login_password']) {
-    session_start();
     $email = $_POST['login_email'];
     $password = $_POST['login_password'];
-    $qry = "select * from `add_admin` where email='$email'and password='$password' ";
+
+    if (isset($_POST['remeber_me']) && $_POST['remeber_me'] === 'on') {
+        setcookie('email', $_POST['login_email'], time() + (86400 * 30), "/");
+        setcookie('password', $_POST['login_password'], time() + (86400 * 30), "/");
+    } else {
+        setcookie('email', '', -1, '/');
+        setcookie('password', '', -1, '/');
+    }
+    $qry = "select * from `admin` where email='$email'and password='$password' ";
     $res = mysqli_query($con, $qry);
     $row = mysqli_fetch_array($res);
     if ($row) {

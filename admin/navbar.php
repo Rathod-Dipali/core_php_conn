@@ -2,6 +2,12 @@
 if (!isset($_SESSION['name'])) {
     echo "<script>window.location='login.php'</script>";
 }
+
+$id = $_SESSION['id'];
+$query = "select * from `admin` where id='$id'";
+$result = mysqli_query($con, $query);
+$row = mysqli_fetch_assoc($result);
+
 if (isset($info_array)) {
 ?>
     <!DOCTYPE html>
@@ -26,9 +32,25 @@ if (isset($info_array)) {
                             <a class="nav-link light_color active" aria-current="page" href="index.php">View Data</a>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <a href="<?php $base_url ?>logout.php"><button class="btn btn-outline-light" type="button">Logout</button></a>
-                    </form>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-center">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">
+                                <?php
+                                // $profileImage = $base_url . 'assets/upload/' . (file_exists('assets/upload/' . $row['image']) && !empty($row['image']) ? $row['image'] : 'default.jpg');
+                                ?>
+                                <!-- <img class="user_image" src="<?= $profileImage ?>"> -->
+                                <img class="user_image"
+                                src="<?= $base_url ?>assets/upload/<?= $row['image'] ?>"
+                                onerror="this.onerror=null; this.src='<?= $base_url ?>assets/upload/default.jpg';"
+                                width="100"
+                                height="100"
+                                alt="User Image">
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item text-danger" href="<?= $base_url ?>admin/logout.php">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>

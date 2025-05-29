@@ -1,5 +1,5 @@
 <?php
-$info_array = ['title' => 'Add Admin'];
+$info_array = ['title' => 'Home'];
 require "navbar.php";
 ?>
 <section class="mt-3 pt-5">
