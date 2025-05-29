@@ -6,7 +6,7 @@ $result = mysqli_query($con, $query);
 ?>
 <section class="mt-3 pt-5">
     <div class="container">
-        <h1 class="text-center mb-3">Show Data</h1>
+        <h1 class="text-center mb-3 text-bg-info text-light">Show Data</h1>
         <a href="<?php $base_url ?>add.php"><button class="btn btn-outline-primary mb-3">Insert Data</button></a>
         <div class="table-responsive">
             <table class="table table-striped table-bordered">
