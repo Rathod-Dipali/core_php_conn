@@ -5,6 +5,7 @@ $password = "";
 $database = "core_php";
 
 $base_url = "http://localhost/Core_php_conn/";
+session_start();
 
 $con = mysqli_connect($server_name,$user_name,$password,$database,'3377');
 if($con){

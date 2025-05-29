@@ -1,4 +1,7 @@
 <?php require "config.php";
+if (!isset($_SESSION['name'])) {
+    echo "<script>window.location='login.php'</script>";
+}
 if (isset($info_array)) {
 ?>
     <!DOCTYPE html>
@@ -16,19 +19,19 @@ if (isset($info_array)) {
     <body>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand light_color">Navbar</a>
+                <a href="<?php $base_url ?>home.php" class="navbar-brand light_color">Home</a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link light_color active" aria-current="page" href="index.php">Home</a>
+                            <a class="nav-link light_color active" aria-current="page" href="index.php">View Data</a>
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
-                        <button class="btn btn-outline-light" type="submit">Logout</button>
+                        <a href="<?php $base_url ?>logout.php"><button class="btn btn-outline-light" type="button">Logout</button></a>
                     </form>
                 </div>
             </div>
         </nav>
 
-        
-<?php } ?>
+
+    <?php } ?>

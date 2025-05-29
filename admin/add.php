@@ -9,23 +9,19 @@ require "navbar.php";
             <div class="form-group">
                 <label>Name :</label>
                 <input type="text" class="form-control" name="name" id="name">
-                <small id="pname_error"></small>
             </div>
             <div class="form-group">
                 <label>Email :</label>
                 <input type="email" class="form-control" name="email" id="email">
-                <small id="pprice_error"></small>
             </div>
             <div class="form-group">
                 <label>Mobile :</label>
                 <input type="number" class="form-control" name="mobile" id="mobile">
-                <small id="pqnty_error"></small>
             </div>
-            <!-- <div class="form-group">
-                        <label>Image :</label>
-                        <input type="file" class="form-control" name="product_img" id="product_img">
-                        <small id="pimg_error"></small>
-                    </div> -->
+            <div class="form-group">
+                <label>Password :</label>
+                <input type="text" class="form-control" name="password" id="password">
+            </div>
             <button type="submit" class="btn btn-outline-primary mt-5" name="add_btn" id="add_btn">Add Data</button>
         </form>
     </div>

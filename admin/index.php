@@ -19,8 +19,8 @@ $result = mysqli_query($con, $query);
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>
-                    <?php while ($row = mysqli_fetch_assoc($result)) {
-                        $no = 1;  ?>
+                    <?php $no = 1; while ($row = mysqli_fetch_assoc($result)) {
+                          ?>
 
                 </thead>
                 <tbody>
