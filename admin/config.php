@@ -12,7 +12,7 @@
     if(!$con){
 
         die("Error in connection!".mysqli_connect_error());
-        
+
     }
 
 ?>

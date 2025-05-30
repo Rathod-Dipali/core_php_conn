@@ -2,7 +2,7 @@
 
     $info_array = ['title' => 'Add Admin'];
     require "navbar.php";
-    
+
 ?>
 
 <section class="mt-3 pt-5">
