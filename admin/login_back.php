@@ -7,7 +7,7 @@
         $email = $_POST['login_email'];
         $password = $_POST['login_password'];
 
-        if (!isset($_POST['remeber_me']) && $_POST['remeber_me'] !== 'on') {
+        if (isset($_POST['remeber_me']) && $_POST['remeber_me'] === 'on') {
 
             setcookie('email', $_POST['login_email'], time() + (86400 * 30), "/");
             setcookie('password', $_POST['login_password'], time() + (86400 * 30), "/");

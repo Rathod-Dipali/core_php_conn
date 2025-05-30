@@ -13,8 +13,8 @@
 </head>
 
 <body>
-    <div class="container d-flex justify-content-center">
-        <div class="mt-5 ">
+    <div class="container d-flex justify-content-center align-items-center">
+        <div class="mt-5">
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-title p-1 text-center text-bg-info text-light">Login</h5>
