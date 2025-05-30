@@ -1,7 +1,10 @@
 <?php
-$info_array = ['title' => 'Add Admin'];
-require "navbar.php";
+
+    $info_array = ['title' => 'Add Admin'];
+    require "navbar.php";
+    
 ?>
+
 <section class="mt-3 pt-5">
     <div class="container border p-5">
         <h2 class="text-center text-primary">Add Data</h2>
@@ -27,15 +30,17 @@ require "navbar.php";
                 <input type="file" class="form-control mb-1" name="image" id="image">
                 <img src="" alt="Image not choosen" width="100" id="img">
             </div>
-            <button type="submit" class="btn btn-outline-primary mt-5" name="add_btn" id="add_btn">Add Data</button>
+            <button type="submit" class="btn btn-outline-primary mt-5" name="insert_admin" id="insert_admin">Add Data</button>
         </form>
     </div>
 </section>
+
 <?php require "footer.php"; ?>
+
 <script>
     var file = document.getElementById("image");
     var img = document.getElementById("img");
     file.addEventListener("change", (e) => {
         img.src = URL.createObjectURL(e.target.files[0])
-    })
+    });
 </script>

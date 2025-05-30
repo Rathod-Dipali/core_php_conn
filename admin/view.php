@@ -1,9 +1,12 @@
 <?php
-$info_array = ['title' => 'Admin Data'];
-require "navbar.php";
-$query = "select * from `admin`";
-$result = mysqli_query($con, $query);
+
+    $info_array = ['title' => 'Admin Data'];
+    require "navbar.php";
+    $query = "select * from `admin`";
+    $result = mysqli_query($con, $query);
+    
 ?>
+
 <section class="mt-3 pt-5">
     <div class="container">
         <h1 class="text-center mb-3 text-bg-info text-light">Show Data</h1>
@@ -39,7 +42,6 @@ $result = mysqli_query($con, $query);
                                 height="100"
                                 alt="User Image">
                         </th>
-                        <!-- <th><img class="user_image" src="<?= $base_url ?>assets/upload/<?= (file_exists('assets/upload/' . $row['image']) && !empty($row['image'])) ? $row['image'] : 'default.jpg' ?>" width="100"></th> -->
                         <td align="center"> <a href="edit.php?id=<?php echo $row['id']; ?>"><button class="btn btn-outline-info">Edit</button></a></td>
                         <td align="center"> <a href="delete.php?id=<?php echo $row['id']; ?>"><button class="btn btn-outline-danger">Delete</button></a></td>
                     </tr>
@@ -51,4 +53,5 @@ $result = mysqli_query($con, $query);
         </div>
     </div>
 </section>
+
 <?php require "footer.php"; ?>

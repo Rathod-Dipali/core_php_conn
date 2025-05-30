@@ -1,4 +1,5 @@
 <?php require "config.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,7 +31,7 @@
                             <input type="checkbox" class="" name="remeber_me" id="remeber_me" <?php if(isset($_COOKIE['password']) && isset($_COOKIE['email'])){ ?> checked <?php } ?>>
                             <label>Remember me :</label>
                         </div>
-                        <button class="btn mt-3 d-flex justify-content-center btn-outline-info" name="login_btn">Login</button>
+                        <button class="btn mt-3 d-flex justify-content-center btn-outline-info" name="login_admin">Login</button>
                     </form>
                 </div>
             </div>
